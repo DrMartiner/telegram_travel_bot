@@ -1,0 +1,156 @@
+{
+  "update_id": 43433483,
+  "callback_query": {
+    "id": "211618111973137954",
+    "from": {
+      "id": 49271181,
+      "is_bot": false,
+      "first_name": "Alex",
+      "username": "omiso_ho",
+      "language_code": "en"
+    },
+    "message": {
+      "message_id": 4736,
+      "from": {
+        "id": 5361609866,
+        "is_bot": true,
+        "first_name": "DevMarketBot",
+        "username": "BalkanMarketBot"
+      },
+      "chat": {
+        "id": 49271181,
+        "first_name": "Alex",
+        "username": "omiso_ho",
+        "type": "private"
+      },
+      "date": 1653835487,
+      "text": "📍 Выбери город:",
+      "reply_markup": {
+        "inline_keyboard": [
+          [
+            {
+              "text": "Белград",
+              "callback_data": "new_ad_city:26"
+            },
+            {
+              "text": "Нови Сад",
+              "callback_data": "new_ad_city:27"
+            }
+          ],
+          [
+            {
+              "text": "Аранджеловац",
+              "callback_data": "new_ad_city:28"
+            },
+            {
+              "text": "Бачка Паланка",
+              "callback_data": "new_ad_city:29"
+            }
+          ],
+          [
+            {
+              "text": "Бачка Топола",
+              "callback_data": "new_ad_city:30"
+            },
+            {
+              "text": "Валево",
+              "callback_data": "new_ad_city:31"
+            }
+          ],
+          [
+            {
+              "text": "Вране",
+              "callback_data": "new_ad_city:32"
+            },
+            {
+              "text": "Врнячка Баня",
+              "callback_data": "new_ad_city:33"
+            }
+          ],
+          [
+            {
+              "text": "Златибор",
+              "callback_data": "new_ad_city:34"
+            },
+            {
+              "text": "Зренянин",
+              "callback_data": "new_ad_city:35"
+            }
+          ],
+          [
+            {
+              "text": "Кралево",
+              "callback_data": "new_ad_city:36"
+            },
+            {
+              "text": "Крушевац",
+              "callback_data": "new_ad_city:37"
+            }
+          ],
+          [
+            {
+              "text": "Лесковац",
+              "callback_data": "new_ad_city:38"
+            },
+            {
+              "text": "Лозница",
+              "callback_data": "new_ad_city:39"
+            }
+          ],
+          [
+            {
+              "text": "Ниш",
+              "callback_data": "new_ad_city:40"
+            },
+            {
+              "text": "Нови Пазар",
+              "callback_data": "new_ad_city:41"
+            }
+          ],
+          [
+            {
+              "text": "Обреновац",
+              "callback_data": "new_ad_city:42"
+            },
+            {
+              "text": "Панчево",
+              "callback_data": "new_ad_city:43"
+            }
+          ],
+          [
+            {
+              "text": "Смедерево",
+              "callback_data": "new_ad_city:44"
+            },
+            {
+              "text": "Сомбор",
+              "callback_data": "new_ad_city:45"
+            }
+          ],
+          [
+            {
+              "text": "Сремска Митровица",
+              "callback_data": "new_ad_city:46"
+            },
+            {
+              "text": "Суботица",
+              "callback_data": "new_ad_city:47"
+            }
+          ],
+          [
+            {
+              "text": "Чачак",
+              "callback_data": "new_ad_city:48"
+            },
+            {
+              "text": "Шабац",
+              "callback_data": "new_ad_city:49"
+            }
+          ]
+        ]
+      }
+    },
+    "chat_instance": "8162088901511567039",
+    "data": "new_ad_city:26"
+  }
+}

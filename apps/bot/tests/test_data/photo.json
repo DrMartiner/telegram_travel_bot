@@ -1,0 +1,50 @@
+{
+  "update_id": 43433531,
+  "message": {
+    "message_id": 4794,
+    "from": {
+      "id": 49271181,
+      "is_bot": false,
+      "first_name": "Alex",
+      "username": "omiso_ho",
+      "language_code": "en"
+    },
+    "chat": {
+      "id": 49271181,
+      "first_name": "Alex",
+      "username": "omiso_ho",
+      "type": "private"
+    },
+    "date": 1653836681,
+    "photo": [
+      {
+        "file_id": "AgACAgIAAxkBAAISumKTi4mS1wvZbBPRtVDta91zCdVJAAIdvDEbJ7ugSOu276K78fveAQADAgADcwADJAQ",
+        "file_unique_id": "AQADHbwxGye7oEh4",
+        "file_size": 1112,
+        "width": 90,
+        "height": 56
+      },
+      {
+        "file_id": "AgACAgIAAxkBAAISumKTi4mS1wvZbBPRtVDta91zCdVJAAIdvDEbJ7ugSOu276K78fveAQADAgADbQADJAQ",
+        "file_unique_id": "AQADHbwxGye7oEhy",
+        "file_size": 12089,
+        "width": 320,
+        "height": 200
+      },
+      {
+        "file_id": "AgACAgIAAxkBAAISumKTi4mS1wvZbBPRtVDta91zCdVJAAIdvDEbJ7ugSOu276K78fveAQADAgADeAADJAQ",
+        "file_unique_id": "AQADHbwxGye7oEh9",
+        "file_size": 47922,
+        "width": 800,
+        "height": 500
+      },
+      {
+        "file_id": "AgACAgIAAxkBAAISumKTi4mS1wvZbBPRtVDta91zCdVJAAIdvDEbJ7ugSOu276K78fveAQADAgADeQADJAQ",
+        "file_unique_id": "AQADHbwxGye7oEh-",
+        "file_size": 73541,
+        "width": 1280,
+        "height": 800
+      }
+    ]
+  }
+}

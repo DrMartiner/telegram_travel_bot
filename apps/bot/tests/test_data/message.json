@@ -1,0 +1,21 @@
+{
+  "update_id": 43433479,
+  "message": {
+    "message_id": 4727,
+    "from": {
+      "id": 49271181,
+      "is_bot": false,
+      "first_name": "Alex",
+      "username": "omiso_ho",
+      "language_code": "en"
+    },
+    "chat": {
+      "id": 49271181,
+      "first_name": "Alex",
+      "username": "omiso_ho",
+      "type": "private"
+    },
+    "date": 1653834962,
+    "text": "Главное меню 📱"
+  }
+}

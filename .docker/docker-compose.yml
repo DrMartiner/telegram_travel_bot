@@ -1,0 +1,94 @@
+version: "3.3"
+services:
+  nginx:
+    build:
+      context: ../.docker/nginx/.
+      dockerfile: Dockerfile
+    restart: always
+    links:
+      - back:back
+    depends_on:
+      - back
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - blabla_bot_media:/var/www/media
+      - blabla_bot_static:/var/www/static
+    environment:
+      - DOMAIN=${DOMAIN}
+
+  back:
+    build:
+      context: ..
+      dockerfile: .docker/Dockerfile
+    links:
+      - blabla_bot_pg:pg
+      - blabla_bot_redis:redis
+    depends_on:
+      - blabla_bot_pg
+      - blabla_bot_redis
+    restart: always
+    environment:
+      - DEBUG=${DEBUG}
+      - BASE_URL=https://${DOMAIN}
+      - TELEGRAM_TOKEN=${TELEGRAM_TOKEN}
+      - CELERY_ALWAYS_EAGER=True
+    volumes:
+      - blabla_bot_media:/application/src/media/
+      - blabla_bot_static:/application/src/static/
+
+  celery_beat:
+    command: "run-celery-beat"
+    build:
+      context: ..
+      dockerfile: .docker/Dockerfile
+    links:
+      - blabla_bot_pg:pg
+      - blabla_bot_redis:redis
+    depends_on:
+      - blabla_bot_pg
+      - blabla_bot_redis
+    restart: always
+    environment:
+      - DEBUG=${DEBUG}
+      - BASE_URL=https://${DOMAIN}
+      - TELEGRAM_TOKEN=${TELEGRAM_TOKEN}
+    volumes:
+      - blabla_bot_media:/application/src/media/
+
+  celery_worker:
+    command: "run-celery-worker"
+    build:
+      context: ..
+      dockerfile: .docker/Dockerfile
+    links:
+      - blabla_bot_pg:pg
+    depends_on:
+      - blabla_bot_pg
+    restart: always
+    environment:
+      - DEBUG=${DEBUG}
+      - BASE_URL=https://${DOMAIN}
+      - TELEGRAM_TOKEN=${TELEGRAM_TOKEN}
+    volumes:
+      - blabla_bot_media:/application/src/media/
+
+  blabla_bot_pg:
+    image: postgres:latest
+    restart: always
+    volumes:
+      - blabla_bot_pg:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=main
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=pass
+
+  blabla_bot_redis:
+    image: redis
+    restart: always
+
+volumes:
+  blabla_bot_pg:
+  blabla_bot_media:
+  blabla_bot_static:

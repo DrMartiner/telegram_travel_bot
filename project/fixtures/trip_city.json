@@ -1,0 +1,26 @@
+[
+    {
+        "model": "trip.city",
+        "pk": 1,
+        "fields": {
+            "name": "Лимассол",
+            "position": 1
+        }
+    },
+    {
+        "model": "trip.city",
+        "pk": 2,
+        "fields": {
+            "name": "Ларнака",
+            "position": 2
+        }
+    },
+    {
+        "model": "trip.city",
+        "pk": 3,
+        "fields": {
+            "name": "Пафос",
+            "position": 3
+        }
+    }
+]

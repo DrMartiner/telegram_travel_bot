@@ -1,0 +1,55 @@
+[
+    {
+        "model": "bot.botmainconfig",
+        "pk": 1,
+        "fields": {
+            "channel_name": "hlgkyfjtugykhjlk",
+            "max_ads_count_per_day": 3
+        }
+    },
+    {
+        "model": "bot.bottextsconfig",
+        "pk": 1,
+        "fields": {
+            "text_trip": "🚗 <b>{{ instance.city_from.name }}</b> ➡️ <b>{{ instance.city_to.name }}</b>\r\n📅 <u>{{ instance.datetime|date:\"d M H:i\" }}</u> \r\n👥 {{ instance.count }} чел\r\n{% if instance.payment == \"free\" %}🆓 Бесплатно{% elif instance.payment == \"pay\" %}💶 Платно{% elif instance.payment == \"petrol\" %}⛽️ Оплатить расходы{% endif %}\r\n📣 {% if instance.status == \"actual\" %}Напишиьте {% endif %}{{ instance.user.user_name_link|safe }}\r\n\r\n{% if instance.status == \"actual\" %}🟢 Актуально{% elif instance.status == \"canceled\" %}⛔ Водитель отменил{% elif instance.status == \"fully\" %}🙅‍♀️ Мест нет{% endif %}",
+            "publish_count_exceed": "Текст превышено кол-во в день:",
+            "new_trip_before_start": "Привет, водитель! \r\n\r\nЗаполни данные для поездки и мы добавим сообщение в группу @{{ channel_name }}. \r\nНажав на кнопку \"Мои поездки\" ты сможешь изменить статус поездки",
+            "new_trip_select_city_from": "🌆 Выбери город из которого ты начнешь поездку",
+            "new_trip_select_city_to": "🏙 Выбери город, в который ты поедешь",
+            "new_trip_select_date": "📅 Выберете дату поездки",
+            "new_trip_select_hour": "⏰ Выбери час, когда ты выезжаешь",
+            "new_trip_select_minutes": "⏰ Выбери минуты",
+            "new_trip_select_pass_count": "👥 Укажи кол-во пассажиров",
+            "new_trip_select_payment": "💰 Выбьерите тип вознаграждения:",
+            "new_trip_confirm": "🚗 <b>{{ instance.city_from.name }}</b> ➡️ <b>{{ instance.city_to.name }}</b>\r\n📅 <u>{{ instance.datetime|date:\"d M H:i\" }}</u> \r\n👥 {{ instance.count }} чел\r\n{% if instance.payment == \"free\" %}🆓 Бесплатно{% elif instance.payment == \"pay\" %}💶 Платно{% elif instance.payment == \"petrol\" %}⛽️ Оплатить расходы{% endif %}\r\n\r\nВсе верно по новой поездке?",
+            "new_trip_confirm_yes": "Да 👍🏻",
+            "new_trip_confirm_no": "Нет 👎🏻",
+            "new_trip_confirmed": "Сообщение будет отправлено в канал @{{ channel_name }}",
+            "new_trip_city_not_found": "Город не найден...",
+            "trip_not_found": "Поездка не найдена...",
+            "common_start": "Привет путешественник! \r\n\r\nНаш бот помогает найти водителя или попутчиков для путешествий по Кипру 🚀",
+            "common_for_new_user_text": "Привет путешественник! \r\n\r\nНаш бот помогает найти водителя или попутчиков для путешествий по Кипру 🚀",
+            "trip_list_one": "🚗  <b>{{ instance.city_from.name }}</b> ➡️ <b>{{ instance.city_to.name }}</b>\r\n📅 <u>{{ instance.datetime|date:\"d M H:i\" }}</u> \r\n👥 {{ instance.count }} чел\r\n{% if instance.payment == \"free\" %}🆓 Бесплатно{% elif instance.payment == \"pay\" %}💶 Платно{% elif instance.payment == \"petrol\" %}⛽️ Оплатить расходы{% endif %}\r\n\r\n{% if instance.status == \"actual\" %}🟢 Актуально{% elif instance.status == \"canceled\" %}⛔ Водитель отменил{% elif instance.status == \"fully\" %}🙅‍♀️ Мест нет{% endif %}",
+            "find_trip_before_start": "Найдите поездки",
+            "find_trip_results": "Результаты поиска",
+            "find_trip_no_results": "Ни одной поездки не найдено...",
+            "common_help_text": "Текст помощи",
+            "command_start_text": "Начало работы",
+            "command_new_text": "Добавить новое объявление",
+            "command_find_text": "Найти поездку",
+            "command_my_text": "Список моих объявлений",
+            "command_help_text": "Помощь",
+            "button_main_menu": "Главное меню📱",
+            "button_find_trip": "Найти машину 🚀",
+            "button_new_trip": "Создать поездку 🆕",
+            "button_my_trips": "Мои поездки 🛣",
+            "button_help": "Помощь 🛟",
+            "button_fully": "🙅‍ Мест нет",
+            "button_cancel": "⛔ Отменить",
+            "button_actual": "🟢 Актуально",
+            "button_payment_free": "🆓 Бесплатно",
+            "button_payment_pay": "💶 Платно",
+            "button_payment_petrol": "⛽️ Оплатить расходы"
+        }
+    }
+]

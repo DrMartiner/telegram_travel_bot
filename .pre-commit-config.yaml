@@ -1,0 +1,32 @@
+repos:
+- repo: local
+  hooks:
+      - id: autoflake
+        name: autoflake
+        entry: autoflake
+        language: system
+        types: [python]
+        args: [
+            '--recursive',
+            '--in-place',
+            '--remove-all-unused-imports',
+            '--remove-duplicate-keys',
+            '.',
+        ]
+-   repo: https://github.com/timothycrosley/isort
+    rev: 5.10.1
+    hooks:
+    -   id: isort
+        additional_dependencies: [toml]
+        files: .
+-   repo: https://github.com/psf/black
+    rev: 20.8b1
+    hooks:
+    -   id: black
+        additional_dependencies: ['click==8.0.4']
+-   repo: https://github.com/PyCQA/bandit
+    rev: 1.7.0
+    hooks:
+    -   id: bandit
+        args: ['-f', 'html', '-o', 'bandit-report.html', '-r', '.']
+
